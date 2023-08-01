@@ -1,5 +1,10 @@
 package jlox;
 
+import jlox.Expr.Assign;
+import jlox.Expr.Call;
+import jlox.Expr.Logical;
+import jlox.Expr.Variable;
+
 class AstPrinter implements Expr.Visitor<String> {
     String print(Expr expr) {
         return expr.accept(this);
@@ -39,4 +44,28 @@ class AstPrinter implements Expr.Visitor<String> {
 
         return builder.toString();
     }
+
+	@Override
+	public String visitVariableExpr(Variable expr) {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'visitVariableExpr'");
+	}
+
+	@Override
+	public String visitAssignExpr(Assign expr) {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'visitAssignExpr'");
+	}
+
+	@Override
+	public String visitLogicalExpr(Logical expr) {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'visitLogicalExpr'");
+	}
+
+	@Override
+	public String visitCallExpr(Call expr) {
+		// TODO Auto-generated method stub
+		throw new UnsupportedOperationException("Unimplemented method 'visitCallExpr'");
+	}
 }

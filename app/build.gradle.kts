@@ -27,7 +27,7 @@ dependencies {
 application {
     // Define the main class for the application.
     // mainClass.set("jlox.Lox")
-    mainClass.set("jlox.Lox")
+    mainClass.set("tool.GenerateAst")
 }
 
 tasks.named<Test>("test") {
